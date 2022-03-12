@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "SeedCMS",
+  title: "CS CORE",
   tagline: "",
   url: "https://seedcms.github.io/",
   baseUrl: "/cs-core/",
