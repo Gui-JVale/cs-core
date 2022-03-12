@@ -1,0 +1,14 @@
+{
+  "cSpell.enableFiletypes": [
+    "!c",
+    "!cpp",
+    "!css",
+    "!html",
+    "!java",
+    "!javascript",
+    "!javascriptreact",
+    "!scss",
+    "!typescript",
+    "!vue"
+  ]
+}
