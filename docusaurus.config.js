@@ -9,13 +9,13 @@ const config = {
   title: "SeedCMS",
   tagline: "",
   url: "https://seedcms.github.io/",
-  baseUrl: "/docs/",
+  baseUrl: "/cs-core/",
   onBrokenLinks: "throw",
   trailingSlash: false,
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "seedcms", // Usually your GitHub org/user name.
-  projectName: "docs", // Usually your repo name.
+  organizationName: "Gui-JVale", // Usually your GitHub org/user name.
+  projectName: "cs-core", // Usually your repo name.
 
   presets: [
     [
