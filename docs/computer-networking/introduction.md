@@ -18,10 +18,10 @@ Layers and Protocols are the glue that holds the internet together, tackling all
 
 The internet can be divided into 4 layers:
 
-1. Application Layer
-2. Transport Layer
-3. Network Layer
-4. Link Layer
+- Application Layer
+- Transport Layer
+- Network Layer
+- Link Layer (2nd layer)
 
 And each of this layers have their own set of protocols, and, for the most part, don't care much about the layer below.
 
