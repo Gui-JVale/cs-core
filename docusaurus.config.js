@@ -26,7 +26,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
           // Please change this to your repo.
-          editUrl: "https://github.com/seedcms/docs",
+          // editUrl: "https://github.com/seedcms/docs",
         },
         blog: false,
         theme: {
@@ -45,7 +45,7 @@ const config = {
       },
       footer: {
         style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} documentation SeedCMS.`,
+        copyright: `CS Core`,
       },
       prism: {
         theme: lightCodeTheme,
