@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # FTP
 
+## Overview
+
 File Transfer Protocol (FTP) is used **when a user wants to transfer files to, or from a remote host**. First, the user must **authenticate** itself with a user identification and password, then user gains access to the remote file system, and can transfer file from the local file system to the remote file system, and vice-versa.
 
 FTP, just as HTTP, **uses TCP under the hood** to have reliable data transfer. Also it uses the client server modal, where the client is the one sending the FTP commands, and controlling the remote file system, while the server sends replies.
