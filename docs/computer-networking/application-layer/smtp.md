@@ -67,6 +67,6 @@ To overcome the limitations of POP3, and add many other features, IMAP was born.
 
 IMAP allows for the mail server to keep a **remote folder structure of the users emails,** allowing for the client to edit this folder structure, and see the changes echo across multiple devices.
 
-### Web-based email
+### Web-based Email
 
 Due to the limitations of the old SMPT protocol, some companies have turned providing **HTTP-based mail services**. Because of the encoding of HTTP, it allows for more rich, multimedia content.
