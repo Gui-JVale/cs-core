@@ -65,7 +65,7 @@ The simplicity of POP3 makes it easier to implement it.
 
 To overcome the limitations of POP3, and add many other features, IMAP was born. As you can guess, while POP3 it's simple, and easier to implement, IMAP is way more complex.
 
-IMAP allows for the mail server to keep a **remote folder structure of the users emails,** allowing for the client to edit this folder structure, and see the change echo across multiple devices
+IMAP allows for the mail server to keep a **remote folder structure of the users emails,** allowing for the client to edit this folder structure, and see the changes echo across multiple devices.
 
 ### Web-based email
 
