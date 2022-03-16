@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-Multiplexing and demultiplexing is responsible for the logical communication between process on two end hosts provided by the transport layer.
+Multiplexing and demultiplexing are responsible for the logical communication between process on two end hosts provided by the transport layer.
 
 ## A Good Analogy
 

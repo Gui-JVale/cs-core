@@ -20,7 +20,7 @@ The two transport layer services available on the Internet are TCP, and UDP. A t
 
 ### TCP
 
-TCP is a connection-oriented protocol that provides reliable data transfer between two processes, control flow, and congestion control. Most of the applications use TCP, because of it's guarantees and services.
+TCP is a connection-oriented protocol that provides reliable data transfer between two processes, flow control, and congestion control. Most of the applications use TCP, because of it's guarantees and services.
 
 Observe that TCP provides reliable data transfer on top of a non-reliable service (the network layer).
 
