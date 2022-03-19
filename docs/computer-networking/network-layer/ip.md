@@ -10,7 +10,7 @@ The Internet's network layer is basically composed of three main components: the
 
 Internet Protocol (IP) is specifically **how the Internet's network layer manages addressing, and forwarding**. Today, there are two versions of IP, IPv4, and IPv6.
 
-## IP Datagram Format
+## IPv4 Datagram Format
 
 As the transport layer has _segments_, the IP protocol payload is a **datagram**, and it looks like this:
 
@@ -57,13 +57,13 @@ To obtain blocks of IP addresses to be used inside an organization, the company 
 
 ### Obtaining Host IP Address
 
-Once an organization has blocks of IP addresses, it can manually distribute them, however this gets mostly handled automatically with **Dynamic Host Configuration Protocol (DCHP)**.
+Once an organization has blocks of IP addresses, it can manually distribute them, however this gets mostly handled automatically with **Dynamic Host Configuration Protocol (DHCP)**.
 
-DHCP is widely used because it's plug-and-play, not requiring manual configuration. Hosts talk to a router DHCP server, and then they get an IP addresses given by the router. This is basically what happens whenever you join a network this days.
+DHCP is widely used because it's plug-and-play, not requiring manual configuration. Hosts talk to a router DHCP server, and then they get an IP addresses given by the router. This is basically what happens whenever you join a network these days.
 
 ### NATs
 
-Network Address Translation, or NAT is a router that sits between the internet, and a local network. It provides the job of abstracting IP addresses, that is, devices sitting behind a NAT don't need to worry about their IP address colliding with the outside world (the only unique address being the NAT itself), and so this doesn't restrict the number of devices to the number of IP addresses given to the organization, now there can be many more devices.
+Network Address Translation, or NAT is a **special router** that sits between the internet, and a local network. It provides the job of abstracting IP addresses, that is, devices sitting behind a NAT don't need to worry about their IP address colliding with the outside world (the only unique address being the NAT itself), and so this doesn't restrict the number of devices to the number of IP addresses given to the organization, now there can be many more devices.
 
 The NAT then translates addresses from datagrams coming in, and going out of it's network. It does this using a **NAT translation table**. To illustrate this, let's say a user sitting with the private address 10.0.0.1, siting behind a NAT, wants to request a Web Server for a Web page (port 80). It creates a packet with the Web server as the datagrams destination address, with it's own private IP address as source address, on the TCP segment, it puts 80 as destination port number, and the arbitrary source port number of 3345. When this packet gets to the NAT, the NAT changes it's source IP address with the NAT's own IP address, and changes the port number with an arbitrary port number that's not currently in use in the NAT translation table, it then creates a record on the table with the key consisting of these two fields it changed on the datagram (source IP address, and new port number), and as value it puts the private host IP address, and original port number. Now the NAT can use this table to translate packets received to the private addresses that it manages.
 
@@ -71,4 +71,28 @@ NATs have enjoy wide deployment in recent dates. It must be said, however, that 
 
 ## IPv6 Addressing
 
+Due to the lack of sufficient IPv4 addresses to fit the internet's demand, IPv6 was designed. IPv6 designers used the accumulated experience learned from IPv4 to tweak, and augment other aspects of IPv4. IPv6 doesn't allow datagram fragmentation, and an IPv6 datagram header has a fixed length, not allowing options at all, this removes overhead computations required by IPv4, maintaining the Internet simple, and performant.
+
+IPv6 datagram header differs from IPv4 datagrams. The main changes are the **expanded addressing capabilities**, addresses now have 128 bits, this ensures that the world will never run out of it (now every grain of sand can have its own IP address!), and a **fixed-length header** (40 bytes long).
+
+## IPv6 Datagram Format
+
+Here's the IPv6 datagram:
+
+![IPv6 datagram format](/img/docs/ipv6-datagram.png)
+
+- _Version_: This remains the same as IPv4 version field, indicates the IP version being used.
+- _Traffic class_, and _Flow Label_: This fields are lso similar to IPv4 Type of Service, and are meant to allow for different classes of packets (who may have priority over others).
+- _Payload Length_: Length of the data carried by the datagram. Note that IPv4 we stored the total length (header + data), because IPv6 has fixed header length, we don't need that anymore
+- _Next Header_: Similar to Ipv4 _Protocol_ field, it indicates the protocol of the layer above, being either TCP, or UDP.
+- _Hop limit_: This has the same functionality as the IPv4 _TTL_, it's meant to avoid packets from infinite looping on the network.
+- _Source and Destination Addresses_: Here are the augmented IPv6 addresses, with 128 bits of space.
+- _Data_: finally, the payload.
+
 ## Interoperability Between IPv4 and IPv6
+
+As you may imagine, because of the colossal size of the internet, it's not very easy to widely deploy big changes. And so, this changes get implemented gradually, resulting in IPv4, and IPv6 to coexist in the internet. New routers support both IPv4, and IPv6 (being backwards compatible), while older ones only support IPv4. This leads to the question, how do they interoperate?
+
+Well there are a couple of techniques for doing that, one is simply converting an IPv6 datagram into an IPv4 one if its going to be sent to an IPv4-only router. However, all the fields on IPv6 that don't have a correspondent IPv4 field, get lost. A solution for that is using **tunneling**.
+
+With tunneling, if a router is about to send an IPv6 datagram to another router that doesn't supports it, it just encapsulates that IPv6 datagram inside an IPv4, and sends it over. The IPv4 router, never knowing it actually is carrying an IPv6 datagram, just does it's job. Once the packet arrives another IPv6 enabled router, that one can then extract the IPv6 datagram, and continue the flow using IPv6.
