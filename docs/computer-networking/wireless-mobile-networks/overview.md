@@ -14,7 +14,14 @@ Throughout this section, we'll see the mechanisms behind wireless, and mobile ne
 
 We've already covered in the link-layer section, how frames are sent/received on wired LANs using the Ethernet protocol. On this section, we'll take a look at the famous 802.11 protocol (WiFi!), and how it handles the sending, and receiving of frames (through the air!).
 
-## Wireless Links
+## Wireless Networks
+
+On mobile network, there are a couple of player that are a part of the game, and those are:
+
+- _Wireless Hosts_: hosts connected to a network through a wireless link
+- _Wireless Links_: a link that connects hosts to a base station.
+- _Base Station_: base stations have no obvious counterparts in wired networks, but the play the role of sending, and receiving data, connecting wireless hosts to the wired network. Base stations are access points, such as WiFi access points. When a wireless host is sending/receiving data through a base station, it's said to be **associated** with it. The process of moving from one base station to another is called **handoff**.
+- _Network Infrastructure_: this is the larger network with which the wireless host wants to communicate.
 
 It's good to point out that wireless links, from the standpoint of link-layer devices, can be seen just as any other physical link, the only difference being the medium, using the air as opposed a physical wire, this abstraction can help simplify things.
 
