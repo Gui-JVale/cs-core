@@ -6,9 +6,9 @@ sidebar_position: 2
 
 ## A Good Analogy
 
-Before diving into technical terms, lets have a look at a good analogy as to how routers work:
+Before diving into technical terms, let's have a look at a good analogy as to how routers work:
 
-Imagine a roundabout where a lot of cars come, and go. Now lets make a small change on the workings of that roundabout, instead of each car just entering the roundabout when traffic permits, the cars must stop at the roundabout entry, and talk to the "roundabout police", the driver must inform them it's final destination, and then the officer will tell the driver which exit of the roundabout he should take to get there, the car can enters the roundabout (which may have other cars in it), and leaves at it's prescribed exit.
+Imagine a roundabout where a lot of cars come, and go. Now let's make a small change on the workings of that roundabout, instead of each car just entering the roundabout when traffic permits, the cars must stop at the roundabout entry, and talk to the "roundabout police", the driver must inform them it's final destination, and then the officer will tell the driver which exit of the roundabout he should take to get there, the car can enters the roundabout (which may have other cars in it), and leaves at it's prescribed exit.
 
 You may imagine that lines of cars may form on the entries of the roundabout, as well as on the exits.
 

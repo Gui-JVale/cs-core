@@ -12,7 +12,7 @@ How about when you don't have WiFi available, but you still have internet access
 
 Throughout this section, we'll see the mechanisms behind wireless, and mobile networks, and hopefully demystify them a bit.
 
-We've already covered in the link-layer section, how frames are sent/received on wired LANs using the Ethernet protocol. On this section, we'll take a look at the famous 802.11 protocol (WiFi!), and how it handles the sending, and receiving of frames (through the air!).
+We've already covered in the link-layer section, how frames are sent/received on wired LANs using the Ethernet protocol. On this section, we'll take a look at the famous 802.11 standard (WiFi!), and how it handles the sending, and receiving of frames (through the air!).
 
 ## Wireless Networks
 

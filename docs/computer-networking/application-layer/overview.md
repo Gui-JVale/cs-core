@@ -28,7 +28,7 @@ The software interface that allows processes on different hosts to talk to each 
 
 ## Transport Services Available to Applications
 
-Knowing that the application layer uses services provided by the transport layer, one might wonder what kinds of services that layer can provide for an application, so lets check them out. Keep in mind that these services are what the transport layer **can provide**, not necessarily what it does provide by the Internet.
+Knowing that the application layer uses services provided by the transport layer, one might wonder what kinds of services that layer can provide for an application, so let's check them out. Keep in mind that these services are what the transport layer **can provide**, not necessarily what it does provide by the Internet.
 
 ### Reliable Data Transfer
 
