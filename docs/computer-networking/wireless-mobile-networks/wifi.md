@@ -82,4 +82,14 @@ In a bluetooth setting with many devices, a **piconet** is formed with up to 8 d
 
 ### Zigbee
 
-While Bluetooth provides a "cable replacement", Zigbee operates at an even lower-power, lower-data-rate, lower-duty-cycle fashion.
+While Bluetooth provides a "cable replacement", Zigbee operates at an even lower-power, lower-data-rate, lower-duty-cycle fashion. One may wonder why do we need this then, well, sometimes faster, and bigger it's not always better. Some devices like home temperature, and light sensor, security devices, who are very simple, and don't need a lot, use Zigbee.
+
+## Cellular Internet Access
+
+How about when you're not in the range of a WiFi access point? Do you just accept that there won't be any internet for you? From personal experience you know that this isn't the case, even though when WiFi or Ethernet aren't there, you may still have access to the internet, and you're probably already familiar with what comes to your rescue: **3G**, or **4G**.
+
+What exactly is that? Enters **Cellular Networks**.
+
+### Architecture
+
+Cellular Networks are given this name because they are divide into a multiple **cells**, a cell being a unit of coverage containing an architecture that somewhat resembles the 802.11 BSS. A cell BSS consists of multiple antennas, which are responsible for sending and receiving data, and a **Base Station Controller (BSC)** who manages allocating radio channels to mobile users, and finding a mobile user (called paging). BSCs are connected to a **Mobile Switching Center (MSC)** which is responsible for authorization, and accounting users to ensure they are allowed to use the data, and call establishment, and handoff.
