@@ -2,4 +2,4 @@
 sidebar_position: 4
 ---
 
-# Support for Multimedia
+# End-Point Authentication
