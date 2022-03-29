@@ -76,4 +76,4 @@ An important problem that arises from the digital signature method explained abo
 
 To solve this issue, we need a certificate issued by a **Certification Authority (CA)**. A CA's job is to verifies that the person, router, server, etc. is who it claims to be, and then it generates a **certificate** that binds the identity with a public key. The certificate is digitally signed by the CA.
 
-With this, Bob along with his signature, also sends to Alice his certificate. Alice then, using the CA's public key verifies that the certificate is legitimate, and then proceeds to extract Bob's public key, and check Bob's signature.
+With this, Bob along with his signature, he also sends to Alice his certificate. Alice then, using the CA's public key verifies that the certificate is legitimate, and then proceeds to extract Bob's public key, and check Bob's signature.
