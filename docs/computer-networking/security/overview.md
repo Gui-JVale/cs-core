@@ -10,6 +10,8 @@ Security is specially important on the internet, a public network of networks in
 
 In a computer network, security can be implemented in all layers, and in many levels, from the network's edge to it's core. Because the Internet, by design, abides to the end-to-end principle (that is complexity and augmented functionality must be implemented on end systems), security practices resides mostly on end hosts.
 
+Before diving a bit into security, it's important to note that security can be implemented in all four layers of a networks, and in practice it does get implemented im multiple layers. Note that if authentication, or other security practices get implemented in the network layer, all layers above enjoy that security. So one now may wonder, why not just implemented security in the network layer and call it a day? Well there are a couple of reasons, first security on the network layer only provide "blanket coverage", and some applications need further methods of security and authentication schemes. Second, and most important, the internet is huge, implementing something in the entire internet takes a lot of effort, and a lot of time. And so security practices enjoy wide deployment mostly on end hosts, and private networks.
+
 So what is security? And what are it's properties? Let's take a closer look into that.
 
 ## Security Principles
