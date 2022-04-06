@@ -3,7 +3,14 @@
   "ignorePaths": [],
   "dictionaryDefinitions": [],
   "dictionaries": [],
-  "words": ["datagram", "datagrams", "Clemente", "hotspot"],
+  "words": [
+    "datagram",
+    "datagrams",
+    "Clemente",
+    "hotspot",
+    "modifiability",
+    "nonlocal"
+  ],
   "ignoreWords": [],
   "import": []
 }
