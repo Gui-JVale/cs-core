@@ -1,0 +1,75 @@
+---
+sidebar_position: 8
+---
+
+# Usability
+
+## Principles
+
+**A system's usability indicates how easy it is for a user to perform a desired action, and how much support the system provides for that.**
+
+More recently usability has been employed a lot to increase the quality (or perceived quality) of a system.
+
+Usability comprises:
+
+- _Learning about the system_. How can the system make it easier for a unfamiliar user to learn how to use itself?
+- _Improving efficiency_. How can the system improve the user efficiency while performing a task?
+- _Minimizing the impact of errors_. How can the system minimize the effects of an error committed by the user? This could be as simple as providing a confirmation step.
+- _Adapting the system to user needs_. How can the user (or the system itself) adapt the system to it's own needs?
+- _Providing confidence and satisfaction_. How can a system give a user confidence that the action was performed correctly? And that the correct action is been taken?
+
+## General Scenario
+
+- _Source of stimulus_: The source is always the end user.
+- _Stimulus_: The user wants to perform an action, or learn about the system
+- _Artifact_: The system or the portion of the system that the user is interacting with
+- _Environment_: This is always either runtime or configuration step of the system of the system.
+- _Response_: The system should either provide the user with the features needed or anticipate the user's action
+- _Response Measure_: the response is measured by task time, number of tasks performed, number of errors committed, user satisfaction, gain of knowledge, ratio of successful operations vs total operations, amount of data lost when an error occurs
+
+| Portion of Scenario | Possible Values                                                                                                                                                                                                                             |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source              | End user, possibly in a specialized role                                                                                                                                                                                                    |
+| Stimulus            | End user tries to use a system efficiently, learn to use the system, minimize the impact of errors, adapt the system, or configure the system.                                                                                              |
+| Environment         | Runtime or configuration time                                                                                                                                                                                                               |
+| Artifacts           | System or the specific portion of the system with which the user is interacting                                                                                                                                                             |
+| Response            | The system should either provide the user with the features needed or anticipate the user’s needs.                                                                                                                                          |
+| Response Measure    | One or more of the following: task time, number of errors, number of tasks accomplished, user satisfaction, gain of user knowledge, ratio of successful operations to total operations, or amount of time or data lost when an error occurs |
+
+## Tactics
+
+Studies in human-computer interaction classify the initiation and nature of an interaction by being user initiation, system initiation, or mixed initiation. To understand in more practical terms, let's take a look at examples: on user initiation, the user can click on a button to open a modal. On system initiation, the system can spin up a loader or progress bar to indicate it's own state to the user. Mixed interaction is when an interaction presents both initiations, such as when a user clicks on something end a progress bar appears to indicate loading time. We use this separation to also divide the tactics for usability.
+
+An important thing for an architect to keep in mind is that user interfaces tend to change a lot, and are also a subject of experiments in the system, and so when designing an architecture, it can be very important have separation of concerns and employ modifiability tactics so that changes to the UI are less costly.
+
+### Support User Initiative
+
+Once a system is executing, usability is enhanced by giving the user feedback as to what the system is doing and by allowing the user to make appropriate responses. For example, the tactics described next—cancel, undo, pause/
+resume, and aggregate—support the user in either correcting errors or being more
+efficient.
+The architect designs a response for user initiative by enumerating and allocating the responsibilities of the system to respond to the user command. Here
+are some common examples of user initiative:
+
+- **Cancel**. When the user issues a cancel command, the system must be listening for it (thus, there is the responsibility to have a constant listener that is not blocked by the actions of whatever is being canceled); the command being canceled must be terminated; any resources being used by the canceled command must be freed; and components that are collaborating with the canceled command must be informed so that they can also take appropriate action.
+- **Undo**. To support the ability to undo, the system must maintain a sufficient amount of information about system state so that an earlier state may be restored, at the user’s request. Such a record may be in the form of state “snapshots”—for example, checkpoints—or as a set of reversible operations. Not all operations can be easily reversed: for example, changing all occurrences of the letter “a” to the letter “b” in a document cannot be reversed by changing all instances of “b” to “a”, because some of those instances of “b” may have existed prior to the original change. In such a case the system must maintain a more elaborate record of the change. Of course, some operations, such as ringing a bell, cannot be undone.
+- **Pause/resume**. When a user has initiated a long-running operation—say, downloading a large file or set of files from a server—it is often useful to provide the ability to pause and resume the operation. Effectively pausing a long-running operation requires the ability to temporarily free resources so that they may be reallocated to other tasks.
+- **Aggregate**. When a user is performing repetitive operations, or operations that affect a large number of objects in the same way, it is useful to provide the ability to aggregate the lower-level objects into a single group, so that the operation may be applied to the group, thus freeing the user from the drudgery (and potential for mistakes) of doing the same operation repeatedly. For example, aggregate all of the objects in a slide and change the text to 14-point font
+
+### Support System Initiative
+
+When the system takes the initiative, it must rely on a model of the user, the task being undertaken by the user, or the system state itself. Each model requires various types of input to accomplish its initiative. The support system initiative tactics are those that identify the models the system uses to predict either its own behavior or the user’s intention. Encapsulating this information will make it easier for it to be tailored or modified. Tailoring and modification can be either dynamically based on past user behavior or offline during development. These tactics are the following:
+
+- **Maintain task model**. The task model is used to determine context so the system can have some idea of what the user is attempting and provide assistance. For example, knowing that sentences start with capital letters would allow an application to correct a lowercase letter in that position.
+- **Maintain user model**. This model explicitly represents the user’s knowledge of the system, the user’s behavior in terms of expected response time, and other aspects specific to a user or a class of users. For example, maintaining a user model allows the system to pace mouse selection so that not all of the document is selected when scrolling is required. Or a model can control the amount of assistance and suggestions automatically provided to a user. A special case of this tactic is commonly found in user interface customization, wherein a user can explicitly modify the system’s user model. ■ Maintain system model. Here the system maintains an explicit model of itself. This is used to determine expected system behavior so that appropriate feedback can be given to the user. A common manifestation of a system model is a progress bar that predicts the time needed to complete the current activity.
+
+## Checklist
+
+| Category                             | Checklist                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Allocation of Responsibilities       | Ensure that additional system responsibilities have been allocated, as needed, to assist the user in the following: <ul> <li> Learning how to use the system </li> <li> Efficiently achieving the task at hand </li> <li> Adapting and configuring the system </li> <li> Recovering from user and system errors</li> </ul>                                                                                                                                                                                                                                                                                                     |
+| Coordination Model                   | Determine whether the properties of system elements’ coordination—timeliness, currency, completeness, correctness, consistency—affect how a user learns to use the system, achieves goals or completes tasks, adapts and configures the system, recovers from user and system errors, and gains increased confidence and satisfaction. For example, can the system respond to mouse events and give semantic feedback in real time? Can long-running events be canceled in a reasonable amount of time?                                                                                                                        |
+| Data Model                           | Determine the major data abstractions that are involved with user-perceivable behavior. Ensure these major data abstractions, their operations, and their properties have been designed to assist the user in achieving the task at hand, adapting and configuring the system, recovering from user and system errors, learning how to use the system, and increasing satisfaction and user confidence. For example, the data abstractions should be designed to support undo and cancel operations: the transaction granularity should not be so great that canceling or undoing an operation takes an excessively long time. |
+| Mapping among Architectural Elements | Determine what mapping among architectural elements is visible to the end user (for example, the extent to which the end user is aware of which services are local and which are remote). For those that are visible, determine how this affects the ways in which, or the ease with which, the user will learn how to use the system, achieve the task at hand, adapt and configure the system, recover from user and system errors, and increase confidence and satisfaction.                                                                                                                                                |
+| Resource Management                  | Determine how the user can adapt and configure the system’s use of resources. Ensure that resource limitations under all user-controlled configurations will not make users less likely to achieve their tasks. For example, attempt to avoid configurations that would result in excessively long response times. Ensure that the level of resources will not affect the users’ ability to learn how to use the system, or decrease their level of confidence and satisfaction with the system.                                                                                                                               |
+| Binding Time                         | Determine which binding time decisions should be under user control and ensure that users can make decisions that aid in usability. For example, if the user can choose, at runtime, the system’s configuration, or its communication protocols, or its functionality via plug-ins, you need to ensure that such choices do not adversely affect the user’s ability to learn system features, use the system efficiently, minimize the impact of errors, further adapt and configure the system, or increase confidence and satisfaction.                                                                                      |
+| Choice of Technology                 | Ensure the chosen technologies help to achieve the usability scenarios that apply to your system. For example, do these technologies aid in the creation of online help, the production of training materials, and the collection of user feedback? How usable are any of your chosen technologies? Ensure the chosen technologies do not adversely affect the usability of the system (in terms of learning system features, using the system efficiently, minimizing the impact of errors, adapting/ configuring the system, and increasing confidence and satisfaction).                                                    |
