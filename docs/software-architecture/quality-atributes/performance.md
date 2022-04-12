@@ -46,6 +46,7 @@ With that we can now go over the general scenario for performance:
 - _Source of stimulus_: The trigger of the event, this can be internal or external (possible multiple) to the system.
 - _Stimulus_: The event arrivals.
 - _Artifact_: The entire system, or specific components of the system
+- _Environment_: In which state the system is when events arrive? Normal mode, overloaded, operating in degraded mode, etc.
 - _Response_: The system process (or fails to process) the arriving events
 - _Response Measure_: The time it takes to process the arriving events. It can be measured by the parameters explained above: latency, throughput, jitter, etc.
 
