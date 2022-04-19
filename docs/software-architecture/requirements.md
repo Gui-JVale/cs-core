@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Architecture & Requirements
+# Discovering Requirements
 
 ## Introduction
 
@@ -117,10 +117,10 @@ How will you write down a business goal that you just learned about? Just as wit
 
 As we've seen, capturing business goals is important because it allows us to discover ASRs that wouldn't appear in any other context. A method for capturing business goals is **Pedigreed Attribute eLicitation Model (PALM)**. It's a seven step method usually carried out over a day and a half in a workshop attended by archiects and stakeholders.
 
-### Capturing ASRs in a Utility Tree
+## Capturing ASRs in a Utility Tree
 
 After gathering ASRs, it's very important to document them in a way that captures their importance. This document can be used for reference and to justify design decisions down the road.
 
 A way to capture ASRs is to use a utility tree. That's simply a tree that has a root with the word 'utility', meaning the 'goodness' of the system. Then you elaborate the tree with the quality attributes of the system, and under each quality attribute, record a specific refinement (such as data latency or transaction throughput).
 
-After that you can use the two ASRs criteria to define the importance of each QA. This criterias are (1) the impact that this QA has on the architecture, and (2) the business value of it. You can simply use values such as low (L), medium (M), and high (H)
+After that you can use the two ASRs criteria to define the importance of each QA. This criterias are (1) the impact that this QA has on the architecture, and (2) the business value of it. You can simply use values such as low (L), medium (M), and high (H).
