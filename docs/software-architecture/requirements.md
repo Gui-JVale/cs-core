@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Introduction
 
-Systems are build to fulfill requirements. That's obvious. However, not all requirements are equal to the eyes of the architect. In fact, most of the functional or specification requirements are of no use to the architect at all.
+Systems are build to fulfill requirements. That's obvious. However, not all requirements are equal to the eyes of the architect. In fact, most of the functional or specification requirements are of  no use to the architect at all.
 
 **We use the term architectural significant requirements (ASR) to define requirements that have a profound effect on the architecture - that is, without this requirement, the architecture would be fundamentally different**. Often, ASRs come up as quality attribute requirements.
 
