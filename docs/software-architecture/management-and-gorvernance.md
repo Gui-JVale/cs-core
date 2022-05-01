@@ -34,7 +34,7 @@ Some of the elements of organizing a project are team organization, division of 
 
 ### Software Development Team Organization
 
-Once the architecture design is in place, ikt can be used to define th eproject oranization. Each member of the team that designed the software architecture becomes the elad for a team whose responsibility is to implement a portion of the architecture.
+Once the architecture design is in place, ikt can be used to define the project organization. Each member of the team that designed the software architecture becomes the lead for a team whose responsibility is to implement a portion of the architecture.
 
 Typical roles withing a software development team are the following:
 
@@ -50,7 +50,7 @@ One of the important relations withing a team is between the software architect 
 
 ## Implementing
 
-During the implementation phase of a project, the project manager and archigtect have a series of decisions to make.
+During the implementation phase of a project, the project manager and architect have a series of decisions to make.
 
 ### Tradeoffs
 
@@ -94,6 +94,6 @@ Finally, defects should be tracked. Anomalies in the number rof defects discover
 
 ### Phase Metrics and Costs to Complete
 
-OPen issues should be kept for each phase. Unmitigated risks from review are treadn in a similar fashion.
+Open issues should be kept for each phase. Unmitigated risks from review are treated in a similar fashion.
 
 Costs to complete is a bottom-up measure that derives from the bottom-up schedule. Once ghe various pieces of the architecture have been assigned to teams, then the teams take ownership of their schedule and the costs to complete their pieces.

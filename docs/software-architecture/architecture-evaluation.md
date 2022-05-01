@@ -18,7 +18,7 @@ Evaluation usually takes one of three forms:
 
 ### Evaluation by the Designer
 
-Every time the designer makes a key design decision or completes a design milestone, the chosen and competing alternatives should be evaluated using the analysis techniques describe in [QA analysis section](./quality-atributes/model-and-analysis.md). Evaluation by the designer is the "test" part of the "generate-and-test" approach to architecture design that we covered in [Designing an Architecture](./designing-architecture.md#generate-and-test).
+Every time the designer makes a key design decision or completes a design milestone, the chosen and competing alternatives should be evaluated using the analysis techniques describe in [QA analysis section](./quality-attributes/model-and-analysis.md). Evaluation by the designer is the "test" part of the "generate-and-test" approach to architecture design that we covered in [Designing an Architecture](./designing-architecture.md#generate-and-test).
 
 How much analysis? This depends on the importance of the decision. Performing analysis is a matter of cost and benefit. Do not spend more time on a decision than it is worth, but also do not spend less time on an important decision than it needs. Some specific considerations include these:
 
@@ -45,12 +45,12 @@ Often, outsiders are chosen because they possess specialized knowledge or experi
 
 ### Contextual Factors
 
-For peer reviews or outside analysis, there are a number of contextual factosr that must be considered when structuring an evaluation.
+For peer reviews or outside analysis, there are a number of contextual factors that must be considered when structuring an evaluation.
 
 - _What artifacts are available?_ To perform an architectural evaluation, there must be an artifact that describes the architecture. This must be located and made available.
 - _Who sees the results?_ Some evaluations are performed with the full knowledge and participation of all of the stakeholders. Others are performed more privately.
 - _Who performs the evaluation?_ Evaluations can be carried out by an individual or a team. In either case, the evaluator(s) should be highly skilled in the domain and the various quality attributes for which teh system is to be evaluated.
-- _Which stakeholders will participate?_ The evaluation process should provide a method to elicit the goals and concerns that the important stakeholders have refarding the system.
+- _Which stakeholders will participate?_ The evaluation process should provide a method to elicit the goals and concerns that the important stakeholders have regarding the system.
 - _what are the business goals?_ The evaluation should answer whether the system will satisfy the business goals. If the business goals are not explicitly captured and prioritized prior to the evaluation, then there should be a portion of the evaluation dedicated to doing so.
 
 ## The Architecture Tradeoff Analysis Method

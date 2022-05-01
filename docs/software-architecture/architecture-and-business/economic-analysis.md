@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Introduction
 
-This far we have been primarily investigating the relatioships between architectural decisions and the quality attributes that the architecture's stakeholders have deemed important: if I make this architectural decision, what effect will it have on the quality attributes? If I have to achieve that quality attribute requirements, what architectural decision will do the trick?
+This far we have been primarily investigating the relationships between architectural decisions and the quality attributes that the architecture's stakeholders have deemed important: if I make this architectural decision, what effect will it have on the quality attributes? If I have to achieve that quality attribute requirements, what architectural decision will do the trick?
 
 As important as this effort is, this perspective is missing a crucial consideration: What are the economic implications of an architectural decision?
 
@@ -20,7 +20,7 @@ Business goals play a key role in requirements for architectures. Because major 
 
 Knowing the costs and benefits associated with particular decision enables reasoned selection from among competing alternatives. The economic analysis does not make decision for the stakeholders, it simply aids in the elicitation and documentation of value for cost (VFC). It gives stakeholders a framework withing which they can apply a rational decision-making process that suits their needs and their risk aversion.
 
-Economic analysis isn't something to apply to every architectural decison, but rather to the most basic ones that put an overarching architectural strategy in place.
+Economic analysis isn't something to apply to every architectural decision, but rather to the most basic ones that put an overarching architectural strategy in place.
 
 ## The Basis for Economical Analysis
 

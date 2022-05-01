@@ -9,7 +9,15 @@
     "Clemente",
     "hotspot",
     "modifiability",
-    "nonlocal"
+    "nonlocal",
+    "nonrisks",
+    "evals",
+    "ATAM",
+    "CBAM",
+    "subcomponents",
+    "Paulish",
+    "flipchart",
+    "asrs"
   ],
   "ignoreWords": [],
   "import": []

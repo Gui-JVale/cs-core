@@ -60,7 +60,7 @@ Design solutions are generated using "collateral" that is available for the proj
 
 Three sources provide tests to be applied to the hypothesis:
 
-1. [The analysis techniques given in the QA section](./quality-atributes//model-and-analysis.md)
+1. [The analysis techniques given in the QA section](./quality-attributes//model-and-analysis.md)
 2. The checklists for each QA
 3. The ASRs. If the hypothesis does not provide a solution for the ASRs, then it must be improved
 
