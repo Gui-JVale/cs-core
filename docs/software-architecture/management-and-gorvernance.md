@@ -92,7 +92,7 @@ Developer productivity is another metric that the project manager can track.
 
 Finally, defects should be tracked. Anomalies in the number rof defects discovered over time indicate a potential problem that should be investigated.
 
-### Phase Metrics and COsts to Complete
+### Phase Metrics and Costs to Complete
 
 OPen issues should be kept for each phase. Unmitigated risks from review are treadn in a similar fashion.
 
