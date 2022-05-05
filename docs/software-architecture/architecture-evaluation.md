@@ -77,7 +77,7 @@ Here are ATAM evaluation team roles:
 
 ### Outputs of ATAM
 
-In preparation for an ATAM exercise, the project's decision ,akers must prepate the following:
+In preparation for an ATAM exercise, the project's decision makers must prepare the following:
 
 - _A concise presentation of the architecture_
 - _Articulation of the business goals._
@@ -116,7 +116,7 @@ Activities in an ATAM-based evaluation are spread out over four phases:
   - The architectural drivers
 - **Step 3: Present the Architecture.** Here, the lead architect makes a presentation describing the architecture at an appropriate level of detail.
 - **Step 4: Identify Architectural Approaches.** The ATAM focuses on analyzing an architecture by understanding its architectural approaches. By now, the evaluation team will have a good idea of what patterns and tactics the architect used in designing the system in this short step, the evaluation team simply catalogs the patterns and tactics that have been identified.
-- **Step 5: Generate Quality Attribute Utility Tree.** IN this step, the quality attribute goals are articulated in detail via a quality attribute utility tree. Utility trees, which were described in [gathering requiements](./requirements.md#capturing-asrs-in-a-utility-tree), serve to make the requirements concrete by defining precisely the relevant quality attribute requirements that the architects were working to provide.
+- **Step 5: Generate Quality Attribute Utility Tree.** IN this step, the quality attribute goals are articulated in detail via a quality attribute utility tree. Utility trees, which were described in [gathering requirements](./requirements.md#capturing-asrs-in-a-utility-tree), serve to make the requirements concrete by defining precisely the relevant quality attribute requirements that the architects were working to provide.
 - **Step 6: Analyze Architectural Approaches.** Here the evaluation team examines the highest-ranked scenarios (as identified in the utility tree) one at a time; the architect is asked to explain how the architecture supports each one. Along the way, the evaluation team documents the relevant architectural decisions and identifies and catalogs their risks, nonrisks, sensitivity points, and tradeoffs. The analysis is not meant to be comprehensive. The key is to elicit sufficient architectural information to establish some link between the architectural decisions that have been made and the quality attribute requirements that need to be satisfied.
 
 Here's a template for scenario analysis:
