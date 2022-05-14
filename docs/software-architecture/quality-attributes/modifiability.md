@@ -10,7 +10,7 @@ Change happens.
 
 Study shows again and again that most of the cost of development happens after initial deployment, that means that designing a modifiable system can lead to a lot of cost reduction. However, as each system is unique, the architect must weigh the cost of making a system modifiable vs having a not so modifiable system.
 
-**Modifiability is can be summarized by the cost and risk involved in making a change in the system**.
+**Modifiability can be summarized by the cost and risk involved in making a change in the system**.
 
 To design for modifiability, an architect must know the following things about the system:
 
@@ -134,8 +134,7 @@ Because the work of people is almost always more expensive than the work of comp
 
 In general, the later in the life cycle we can bind values, the better. However,
 putting the mechanisms in place to facilitate that late binding tends to be more
-expensive—yet another tradeoff. And so the equation on page 118 comes into
-play. We want to bind as late as possible, as long as the mechanism that allows it
+expensive—yet another tradeoff. We want to bind as late as possible, as long as the mechanism that allows it
 is cost-effective.
 Tactics to bind values at compile time or build time include these:
 
@@ -147,15 +146,15 @@ Tactics to bind values at compile time or build time include these:
   Tactics to bind values at startup or initialization time include this:
 - Resource files
   Tactics to bind values at runtime include these:
-- Runtime registration
-- Dynamic lookup (e.g., for services)
-- Interpret parameters
-- Startup time binding
-- Name servers
-- Plug-ins
-- Publish-subscribe
-- Shared repositories
-- Polymorphism
+  - Runtime registration
+  - Dynamic lookup (e.g., for services)
+  - Interpret parameters
+  - Startup time binding
+  - Name servers
+  - Plug-ins
+  - Publish-subscribe
+  - Shared repositories
+  - Polymorphism
 
 Separating building a mechanism for modifiability from using the mechanism to make a modification admits the possibility of different stakeholders being involved—one stakeholder (usually a developer) to provide the mechanism and another stakeholder (an installer, for example, or a user) to exercise it later, possibly in a completely different life-cycle phase. Installing a mechanism so that someone else can make a change to the system without having to change any code is sometimes called externalizing the change.
 
